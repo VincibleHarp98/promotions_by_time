@@ -1,0 +1,167 @@
+*,
+*:after,
+*before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#contenedor_cargar {
+    background-color: rgba(250, 240, 245, 0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+
+table {
+    width: 95%;
+    margin: 10px auto;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-family: Georgia, 'Arial', Times, serif;
+}
+
+table tr td,
+th {
+    padding: 5px 10px;
+    border: 6px solid rgb(255,255,255);
+}
+table button {
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc323f;
+    color: white;
+    cursor: pointer;
+}
+
+table td {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+table td:focus {
+    background-color: #ffffff;
+    color: black;
+    transform: translateY(-38px) rotateX(360deg);
+
+}
+
+
+
+#carga {
+    border: 15px solid #ccc;
+    border-top-color: #F4266A;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+
+.text3 {
+    font-size: 19px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #80ff02;
+    text-transform: uppercase;
+}
+
+.text4 {
+    font-size: 19px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #ff0000;
+    text-transform: uppercase;
+}
+
+.text2 {
+    font-size: 19px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #6B33FF;
+    text-transform: uppercase;
+}
+
+.alert {
+    font-size: 19px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: red;
+    text-transform: uppercase;
+}
+
+.proceso {
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
