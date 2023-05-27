@@ -24,7 +24,7 @@ if (isset($_SESSION['usuario'])) {
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <link href="../../assets/fontawesome-free-6.4.0-web">
     <link rel="icon" type="image/png" href="../../img/logo.png" />
     <title>Promotions_by_time</title>
   </head>
@@ -54,21 +54,21 @@ if (isset($_SESSION['usuario'])) {
      </li>
      <li>
        <a href="./">
-         <i class="fas fa-home"></i>
+       <i class="fas fa-regular fa-file-check"></i>
          <span class="links_name">Tickets Activados</span>
        </a>
         <span class="tooltip">Tickets Activados</span>
      </li>
      <li>
-      <a href="./kms/">
-      <i class="fas fa-solid fa-compass"></i>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#addpromo">
+      <i class="fas fa-solid fa-file-plus"></i>
         <span class="links_name">Crear Promo</span>
       </a>
       <span class="tooltip">Crear Promo</span>
     </li>
      <li>
        <a href="./fechas/">
-       <i class="fas fa-solid fa-file-excel"></i>
+       <i class="fas fa-solid fa-eye"></i>
          <span class="links_name">Ver Promos</span>
        </a>
         <span class="tooltip">Ver Promos</span>
@@ -100,7 +100,7 @@ if (isset($_SESSION['usuario'])) {
        
     <li>
         <a href="./llantas-storage/">
-        <i class="fas fa-solid fa-tire"></i>
+        <i class="fas fa-light fa-users"></i>
           <span class="links_name">Ver Clientes</span>
         </a>
         <span class="tooltip">Ver Clientes</span>
@@ -157,6 +157,26 @@ if (isset($_SESSION['usuario'])) {
  <section class="home-section">
    
  </section>
+
+<!-- Modal -->
+<div class="modal fade" id="addpromo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Crear Nueva Promocion</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
  <script>
  let sidebar = document.querySelector(".sidebar");
  let closeBtn = document.querySelector("#btn");
